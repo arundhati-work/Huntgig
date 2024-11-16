@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# HUNTGIG - Job Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Huntgig is a job portal developed using React, Axios, and Material UI (optional), designed to offer job seekers an intuitive platform to explore job listings and company profiles. This project focuses on front-end development with session management and dynamic content rendering, providing a user-friendly experience.
 
-## Available Scripts
+This assignment has been created by Arundhati Bandopadhyaya (NUID: 002313855) as part of assignment 9 for INFO6150 course taught by Prof. Vishal Chawla.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. **Login and Session Management**:
+- A login page authenticates users using stored usernames and passwords.
+- User sessions are managed using Axios for API calls, with options to login and logout.
+- User information is verified against data manually entered into the backend, following secure session protocols.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Job Portal Pages and Routing**:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    There are 7 pages for easy navigation:
+- Home: Introduction to Huntgig.
+- About: Overview of Huntgig’s mission, values, and key features.
+- Job Listings: Dynamic job listings showcasing available positions.
+- Company Showcase: Image gallery of companies with basic details.
+- Contact: Contact form for users to reach out, including FAQs in an accordion.
+- Sign up: To create user account with email, password and confirm password.
+- Login: To log into user account with email and password.
 
-### `npm test`
+3. **Job Listings with Frontend Data**:
+- The Job Listings page dynamically displays job positions using front-end data, with each listing providing job title, last updated, description and link to apply.
+- The data for job listings is handled on the front end for efficient rendering without API requests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Company Showcase with Image Gallery**:
+- Company Showcase page displays a gallery of company images sourced from the backend.
+- Images are retrieved without requiring specific user-based filtering for now, focusing on gallery display.
 
-### `npm run build`
+5. **Material UI Components**:
+- Material UI components enhance design and responsiveness throughout the portal.
+- Features include navigation bars, buttons, cards, accordions and form elements for a cohesive and professional look.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+|---Huntgig/
+  |---server/
+    |---models/
+      |---Company.js
+      |---Contact.js
+      |---User.js
+    |---routes/
+      |---AuthRoutes.js
+      |---CompanyRoutes.js
+      |---ContactRoutes.js
+    |---server.js
+  |---src/
+    |---Components/
+      |---Footer/
+        |---Footer.js
+        |---Footer.css
+      |---Job/
+        |---Job.js
+        |---Job.css
+      |---Navbar/
+        |---Navbar.js
+        |---Navbar.css
+      |---Testimonials/
+        |---Testimonials.js
+      |---AuthContext.js
+    |---Data/
+      |---JobPosts.js
+      |---TestimonialsData.js
+    |---Images/
+    |---Pages/
+      |---CSS/
+        |---About.js
+        |---Companies.js
+        |---Forms.js
+        |---Home.js
+      |---About.js
+      |---Companies.js
+      |---Contact.js
+      |---Home.js
+      |---Jobs.js
+      |---Login.js
+      |---Signup.js
+    |---App.css
+    |---App.js
+    |---App.css
+    |---App.test.js
+    |---index.css
+    |---index.js
+    |---reportWebVitals.js
+    |---setupTests.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- **Frontend**: React, Axios, Material UI  
+- **Backend**: Node.js, Express  
+- **Database**: MongoDB Compass  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Steps to Run the Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Run the mongo database
+``` bash
+   >> mongod --port 27018 --dbpath C:\data\db
+```
+2. Run the backend
+``` bash
+    >> cd server
+    >> nodemon server.js
+```
+3. Run the frontend
+``` bash
+    >> npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

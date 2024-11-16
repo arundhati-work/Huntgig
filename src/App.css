@@ -1,38 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiButton-root {
+  background-color: #1da9b1 !important;
+  color: #fff !important;
+  padding: 1rem 2rem !important;
+  font-size: 1rem !important;
+  font-family: Poppins, sans-serif !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MuiButton-root.dark-btn {
+  background-color: #7aedf3 !important;
+  color: #0a595e !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.MuiButton-root.dark-btn:hover {
+  background-color: #66dfec !important;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiButton-root:hover {
+  background-color: #138f9c !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue-container{
+  background-color: #1da9b1;
+  padding: 2rem 0 !important;
+}
+
+.bg-gray{
+  background-color: #e6eff7;
+}
+
+.text-dark-black{
+  color: #302f2f;
+}
+
+.text-medium-black{
+  color: #413f3f;
+}
+
+.text-light-black{
+  color: #666565;
+}
+
+.text-dark-white{
+  color: #f5f4f4;
+}
+
+.text-medium-white{
+  color: #e6e5e5;
+}
+
+.li-space{
+  padding: 0.5rem 0;
+}
+
+.container-space{
+  margin: 3rem 0;
+}
+
+.font-poppins{
+  font-family: Poppins, sans-serif !important;
+}
+
+.main-content {
+  margin-bottom: 50px;
 }
